@@ -1,20 +1,23 @@
 {
   "@context": "https://schema.org",
-  "@id": "https://data.brabantcloud.nl/gebouwen",
+  "@id": "https://data.brabantcloud.nl/personen-organisaties",
   "@type": "Dataset",
   "name": [
     {
       "@language": "en",
-      "@value": "Brabant buildings"
+      "@value": "Brabant persons & organisations"
     },
     {
       "@language": "nl",
-      "@value": "Brabantse gebouwen"
+      "@value": "Brabantse personen & organisaties"
     }
   ],
   "genre": [
     {
-      "@id": "https://data.cultureelerfgoed.nl/termennetwerk/onderwerpen/Gebouwen"
+      "@id": "https://data.cultureelerfgoed.nl/termennetwerk/onderwerpen/Personen"
+    },
+    {
+      "@id": "https://data.cultureelerfgoed.nl/termennetwerk/onderwerpen/Organisaties"
     }
   ],
   "creator": [
@@ -23,34 +26,31 @@
     }
   ],
   "url": ["https://n2t.net/ark:/15052/"],
-  "mainEntityOfPage": [
-    "https://www.brabantcloud.nl/page/787/brabantse-kloosters-als-termenlijst"
-  ],
   "description": [
     {
       "@language": "en",
-      "@value": "Buildings related to, or of historical importance to, the province of North Brabant"
+      "@value": "Persons and organisations related to, or of historical importance to, the province of North Brabant"
     },
     {
       "@language": "nl",
-      "@value": "Gebouwen die een relatie hebben tot of van belang zijn geweest voor de provincie Noord-Brabant"
+      "@value": "Personen en organisaties die een relatie hebben tot of van belang zijn geweest voor de provincie Noord-Brabant"
     }
   ],
   "inLanguage": "nl",
   "distribution": [
     {
-      "@id": "https://not.brabantcloud.delving.io/sparql/gebouwen",
+      "@id": "https://not.brabantcloud.delving.io/sparql/personen-organisaties",
       "@type": "DataDownload",
-      "contentUrl": "https://not.brabantcloud.delving.io/sparql/gebouwen",
+      "contentUrl": "https://not.brabantcloud.delving.io/sparql/personen-organisaties",
       "encodingFormat": "application/sparql-query",
       "potentialAction": [
         {
           "@type": "SearchAction",
-          "query": "file://../queries/search/brabantse-gebouwen.rq"
+          "query": "file://../queries/search/brabantse-personen-organisaties.rq"
         },
         {
           "@type": "FindAction",
-          "query": "file://../queries/lookup/brabantse-gebouwen.rq"
+          "query": "file://../queries/lookup/brabantse-personen-organisaties.rq"
         },
         {
           "@type": "Action",

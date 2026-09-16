@@ -1,0 +1,23 @@
+# Lookup query for the merged "Brabantse personen & organisaties" dataset
+# (planio #3544). zpack-compatible port — see the header of
+# search/brabantse-personen-organisaties.rq for the deviations from the
+# Fuseki-flavored NoT idiom.
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+    ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> skos:Concept .
+    ?uri skos:prefLabel ?schema_name .
+    ?uri skos:altLabel ?schema_alternateName .
+    ?uri skos:scopeNote ?schema_description .
+}
+WHERE {
+    VALUES ?uri { ?uris }
+
+    ?uri a ?type .
+    VALUES ?type { schema:Person schema:Organization }
+    ?uri schema:name ?schema_name .
+    OPTIONAL { ?uri schema:alternateName ?schema_alternateName }
+    OPTIONAL { ?uri schema:description ?schema_description }
+}
+LIMIT 10000
